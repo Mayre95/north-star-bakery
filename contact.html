@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact North Star Bakery, send a pre-order request, and find our location and hours.">
+  <title>Contact | North Star Bakery</title>
+</head>
+<body>
+  <header>
+    <img src="assets/bakery-logo_c.png" alt="North Star Bakery logo: a brown outline of a bread loaf with a wheat stalk inside, above the words North Star Bakery" width="150">
+    <p>Handmade with love in your neighborhood</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About Our Bakery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact and Pre-Orders</h1>
+    <p>Have a question or want to reserve your favorites? Fill out the form below and we will reply within one business day.</p>
+
+    <section>
+      <h2>Inquiry and Pre-Order Request</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <p>
+            <label for="name">Full name (required)</label>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+          </p>
+          <p>
+            <label for="email">Email address (required)</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Request Details</legend>
+          <p>
+            <label for="request-type">Request type (required)</label>
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose a request type</option>
+              <option value="pre-order">Pre-order</option>
+              <option value="custom-cake">Custom cake or event order</option>
+              <option value="general">General question</option>
+            </select>
+          </p>
+          <p>
+            <label for="pickup-date">Pickup date (required)</label>
+            <input type="date" id="pickup-date" name="pickup-date" required min="2026-11-12">
+          </p>
+          <p>
+            <label for="item-details">Item details, such as product names and quantities (required)</label>
+            <textarea id="item-details" name="item-details" rows="4" cols="40" required minlength="5" maxlength="500"></textarea>
+          </p>
+          <p>
+            <label for="allergy-notes">Allergy notes, if applicable</label>
+            <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" maxlength="300"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Send My Request</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Location</h2>
+      <address>
+        North Star Bakery<br>
+        125 Maple Street<br>
+        Minneapolis, MN 55401<br>
+        Phone: <a href="tel:+16125550147">(612) 555-0147</a><br>
+        Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+      </address>
+      <p>Street parking is available on Maple Street, and we are one block from the Route 6 bus stop.</p>
+    </section>
+
+    <section>
+      <h2>Hours of Operation</h2>
+      <ul>
+        <li>Monday: Closed</li>
+        <li>Tuesday to Friday: 6:30 a.m. to 3:00 p.m.</li>
+        <li>Saturday: 7:00 a.m. to 3:00 p.m.</li>
+        <li>Sunday: 7:00 a.m. to 1:00 p.m.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    <p>125 Maple Street, Minneapolis, MN 55401</p>
+  </footer>
+</body>
+</html>
