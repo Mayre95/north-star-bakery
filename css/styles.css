@@ -173,7 +173,7 @@ main {
 
 section,
 article {
-  background-color: #FFFFFF;
+  background-color: var(--cream);
   border-left: 6px solid var(--wheat);
   border-radius: var(--radius);
   padding: var(--space);
@@ -281,7 +281,7 @@ textarea {
   padding: 0.6rem;
   border: 2px solid var(--charcoal);
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: var(--cream);
   color: var(--charcoal);
   width: 100%;
 }
