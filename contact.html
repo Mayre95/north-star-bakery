@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Playfair+Display:wght@600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -31,16 +32,19 @@
     <div class="row">
     <section class="wide">
       <h2>Inquiry and Pre-Order Request</h2>
-      <form action="#" method="post">
+      <form id="preorder-form" action="#" method="post">
+        <p id="prefill-notice" class="notice" hidden></p>
         <fieldset>
           <legend>Your Contact Information</legend>
           <p>
             <label for="name">Full name (required)</label>
-            <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name">
+            <input type="text" id="name" aria-describedby="name-error" name="name" required minlength="2" maxlength="60" autocomplete="name">
+            <span class="error" id="name-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="email">Email address (required)</label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+            <input type="email" id="email" aria-describedby="email-error" name="email" required autocomplete="email" placeholder="name@example.com">
+            <span class="error" id="email-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
@@ -48,30 +52,35 @@
           <legend>Request Details</legend>
           <p>
             <label for="request-type">Request type (required)</label>
-            <select id="request-type" name="request-type" required>
+            <select id="request-type" aria-describedby="request-type-error" name="request-type" required>
               <option value="">Choose a request type</option>
               <option value="pre-order">Pre-order</option>
               <option value="custom-cake">Custom cake or event order</option>
               <option value="general">General question</option>
             </select>
+            <span class="error" id="request-type-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="pickup-date">Pickup date (required)</label>
-            <input type="date" id="pickup-date" name="pickup-date" required min="2026-11-12">
+            <input type="date" id="pickup-date" aria-describedby="pickup-date-error" name="pickup-date" required min="2026-11-12">
+            <span class="error" id="pickup-date-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="item-details">Item details, such as product names and quantities (required)</label>
-            <textarea id="item-details" name="item-details" rows="4" cols="40" required minlength="5" maxlength="500"></textarea>
+            <textarea id="item-details" aria-describedby="item-details-error" name="item-details" rows="4" cols="40" required minlength="5" maxlength="500"></textarea>
+            <span class="error" id="item-details-error" aria-live="polite"></span>
           </p>
           <p>
             <label for="allergy-notes">Allergy notes, if applicable</label>
-            <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" maxlength="300"></textarea>
+            <textarea id="allergy-notes" aria-describedby="allergy-notes-error" name="allergy-notes" rows="3" cols="40" maxlength="300"></textarea>
+            <span class="error" id="allergy-notes-error" aria-live="polite"></span>
           </p>
         </fieldset>
 
         <p>
           <button type="submit">Send My Request</button>
         </p>
+        <p id="form-success" class="success" role="status" tabindex="-1" hidden></p>
       </form>
     </section>
 

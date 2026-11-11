@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Playfair+Display:wght@600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -28,13 +29,26 @@
     <h1>Our Products</h1>
     <p>Everything we sell is baked fresh each morning. Prices are listed as ranges because sizes and options vary. There is no online checkout; please visit us or send a pre-order request.</p>
 
+    <section id="preorder-list" aria-labelledby="preorder-heading">
+      <h2 id="preorder-heading">My Pre-Order List</h2>
+      <p>Planning a pickup? Select <strong>+ Add to My Pre-Order List</strong> next to any product below. Your list is saved on this device, so it will still be here when you come back.</p>
+      <p>You have <strong id="preorder-count" aria-live="polite">0 items</strong> in your list.</p>
+      <p id="preorder-empty">Your list is empty. Add your favorite breads, pastries, or cakes below.</p>
+      <ul id="preorder-items"></ul>
+      <p id="preorder-actions" hidden>
+        <a class="cta" href="contact.html">Send My Pre-Order Request</a>
+        <button type="button" id="clear-list" class="secondary-button">Clear My List</button>
+      </p>
+    </section>
+
     <section>
       <h2>Breads</h2>
       <img src="assets/bakery-bread_c.png" alt="Crusty handmade sourdough and country loaves dusted with flour in our bakery display case" width="600">
       <ul>
-        <li><strong>Country Sourdough:</strong> A crackly crust with a soft, tangy center, fermented for 24 hours. $7&ndash;$9</li>
-        <li><strong>Honey Whole Wheat:</strong> A hearty sandwich loaf sweetened with local honey. $6&ndash;$8</li>
-        <li><strong>French Baguette:</strong> Thin, crisp, and perfect for dinner tables. $4&ndash;$5</li>
+        <li data-product="country-sourdough"><strong>Country Sourdough:</strong> A crackly crust with a soft, tangy center, fermented for 24 hours. $7&ndash;$9</li>
+        <li data-product="honey-wheat"><strong>Honey Whole Wheat:</strong> A hearty sandwich loaf sweetened with local honey. $6&ndash;$8</li>
+        <li data-product="baguette"><strong>French Baguette:</strong> Thin, crisp, and perfect for dinner tables. $4&ndash;$5</li>
+        <li data-product="signature-loaf"><strong>Signature Loaf:</strong> Our slow-fermented house sourdough with a deep brown crust. $9&ndash;$11</li>
       </ul>
       <figure>
         <img src="assets/bakery-signature-loaf_c.png" alt="The North Star Signature Loaf, a round dark-crusted rustic bread dusted with flour and wrapped in a white linen towel" width="500">
@@ -46,19 +60,19 @@
     <section>
       <h2>Pastries</h2>
       <ul>
-        <li><strong>Butter Croissants:</strong> Flaky, golden layers made with local butter. $3&ndash;$4 each</li>
-        <li><strong>Seasonal Fruit Danishes:</strong> Filled with fruit from nearby farms. $4&ndash;$5 each</li>
-        <li><strong>Cinnamon Swirls:</strong> Soft rolls with brown sugar and cinnamon. $3&ndash;$4 each</li>
-        <li><strong>Cookies:</strong> Chocolate chip, oatmeal, and shortbread. $2&ndash;$3 each, or $20&ndash;$24 per dozen</li>
+        <li data-product="croissant"><strong>Butter Croissants:</strong> Flaky, golden layers made with local butter. $3&ndash;$4 each</li>
+        <li data-product="danish"><strong>Seasonal Fruit Danishes:</strong> Filled with fruit from nearby farms. $4&ndash;$5 each</li>
+        <li data-product="cinnamon-swirl"><strong>Cinnamon Swirls:</strong> Soft rolls with brown sugar and cinnamon. $3&ndash;$4 each</li>
+        <li data-product="cookies"><strong>Cookies:</strong> Chocolate chip, oatmeal, and shortbread. $2&ndash;$3 each, or $20&ndash;$24 per dozen</li>
       </ul>
     </section>
 
     <section>
       <h2>Cakes</h2>
       <ul>
-        <li><strong>Celebration Cakes:</strong> Custom layer cakes for birthdays and parties. $35&ndash;$75</li>
-        <li><strong>Wedding and Event Cakes:</strong> Tiered cakes designed with event planners. $150&ndash;$400</li>
-        <li><strong>Everyday Loaf Cakes:</strong> Lemon, banana, and chocolate cakes by the slice or whole. $4&ndash;$20</li>
+        <li data-product="celebration-cake"><strong>Celebration Cakes:</strong> Custom layer cakes for birthdays and parties. $35&ndash;$75</li>
+        <li data-product="wedding-cake"><strong>Wedding and Event Cakes:</strong> Tiered cakes designed with event planners. $150&ndash;$400</li>
+        <li data-product="loaf-cake"><strong>Everyday Loaf Cakes:</strong> Lemon, banana, and chocolate cakes by the slice or whole. $4&ndash;$20</li>
       </ul>
       <p>Custom cakes need at least five days' notice. <a href="contact.html">Send a cake pre-order request</a>.</p>
     </section>

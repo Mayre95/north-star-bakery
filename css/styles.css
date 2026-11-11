@@ -378,3 +378,105 @@ footer p {
     padding: var(--space) calc(var(--space) * 2);
   }
 }
+
+/* ==========================================================
+   Touchstone 4: JavaScript feature and validation styles
+   (same 4-color palette)
+   ========================================================== */
+[hidden] {
+  display: none !important;
+}
+
+/* Product "Add to My Pre-Order List" buttons */
+li[data-product] {
+  margin-bottom: 0.75rem;
+}
+
+.list-button,
+.secondary-button,
+.remove-button {
+  display: inline-block;
+  width: auto;
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+  background-color: var(--cream);
+  color: var(--brown);
+  border: 2px solid var(--brown);
+}
+
+.list-button {
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.list-button.added {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+.remove-button {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+/* Pre-Order List panel */
+#preorder-list {
+  border: 3px solid var(--brown);
+  border-left-width: 10px;
+}
+
+#preorder-items {
+  padding-left: 1.2rem;
+}
+
+#preorder-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: none;
+}
+
+/* Form validation feedback */
+.error {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: 700;
+  color: var(--brown);
+}
+
+.error:not(:empty) {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--wheat);
+  color: var(--charcoal);
+  border-radius: 6px;
+}
+
+.error:not(:empty)::before {
+  content: "⚠ ";
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 3px solid var(--brown);
+  outline: 3px dashed var(--wheat);
+}
+
+.notice,
+.success {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  border: 2px solid var(--brown);
+  background-color: var(--wheat);
+  color: var(--charcoal);
+}
+
+@media (min-width: 768px) {
+  #preorder-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
