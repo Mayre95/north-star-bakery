@@ -328,15 +328,17 @@ function setupFormValidation() {
 
   Object.keys(validators).forEach(function (fieldName) {
     const field = form.elements[fieldName];
-    // Check a field when the user leaves it, and re-check as they fix it
-    field.addEventListener("blur", function () {
-      validateField(field);
-    });
-    field.addEventListener("input", function () {
+    // Errors appear when the form is submitted. After that, a field is
+    // re-checked as the user fixes it, so the message clears right away.
+    // (Checking on "blur" made messages push the Send button down while
+    // the user was clicking it, so the click missed the button.)
+    function recheck() {
       if (field.getAttribute("aria-invalid") === "true") {
         validateField(field);
       }
-    });
+    }
+    field.addEventListener("input", recheck);
+    field.addEventListener("change", recheck);
   });
 
   form.addEventListener("submit", handleSubmit);
